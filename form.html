@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Aspirasi Masyarakat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 25px;
+    }
+    h2 {
+      text-align: center;
+      color: #0c0c0c;
+    }
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    input[type="submit"] {
+      background: #25bf1d;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #0b4a04;
+    }
+  </style>
+</head>
+<body>
+  <h2>Form Aspirasi Masyarakat</h2>
+  <form action="sukses.html" method="get">
+    <!-- Input text -->
+    <label for="nama">Nama Lengkap:</label>
+    <input type="text" id="nama" name="nama" required>
+    <label for="email">Alamat Email:</label>
+    <input list="email" id="email" name="email" placeholder="@gmail.com" required> 
+     
+     
+
+    <!-- Input password -->
+    <label for="password">Kata Sandi:</label>
+    <input type="password" id="password" name="password" required>
+
+    <!-- Textarea -->
+    <label for="aspirasi">Aspirasi Anda:</label>
+    <textarea id="aspirasi" name="aspirasi" rows="4" placeholder="Tuliskan pendapat atau kritikan Anda di sini..."></textarea>
+
+    <!-- Radio button -->
+    <label>Apakah Anda mendukung aksi demo?</label>
+    <input type="radio" id="ya" name="dukungan" value="Ya">Ya
+    <input type="radio" id="tidak" name="dukungan" value="Tidak">Tidak
+
+    <!-- Checkbox -->
+    <label>Isu yang Anda dukung:</label>
+    <input type="checkbox" id="pendidikan" name="isu" value="Pendidikan">Pendidikan
+    <br>
+    <input type="checkbox" id="kesehatan" name="isu" value="Kesehatan">Kesehatan
+    <br>
+    <input type="checkbox" id="lingkungan" name="isu" value="Lingkungan">Lingkungan <br>
+    <input type="checkbox" id="Lainnya" name="isu" value="Lainnya">Lainnya
+    
+
+    <!-- Select option -->
+    <label for="Tujuan">Sasaran Aspirasi:</label>
+    <select id="Tujuan" name="Tujuan">
+      <option value="medan">Presiden</option>
+      <option value="jakarta">Kementrian</option>
+      <option value="bandung">DPR</option>
+      <option value="surabaya">Pejabat Setempat</option>
+    </select>
+
+    <!-- Submit -->
+    <input type="submit" value="Kirim Aspirasi">
+  </form>
+</body>
+</html>
