@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Program Kalkulator Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        label,
+        input {
+            margin: 8px 0;
+            display: block;
+        }
+
+        input {
+            padding: 6px;
+            font-size: 1rem;
+            width: 200px;
+        }
+
+        .operators {
+            margin: 10px 0;
+        }
+
+        .operators button {
+            padding: 10px 18px;
+            font-size: 1.2rem;
+            margin-right: 8px;
+            border: none;
+            border-radius: 6px;
+            background: #1976d2;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .operators button:hover {
+            background: #0c488e;
+        }
+
+        button#hitung {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            background: #00ae06;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        button#hitung:hover {
+            background: #007d06;
+        }
+
+        button#reset {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            background: #f42415;
+            color: white;
+            border: none;
+            border-radius: 6px;
+        }
+
+        button#reset:hover {
+            background: #b50505;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+            width: fit-content;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Program Kalkulator Sederhana</h2>
+
+    <label for="bil1">Input Angka Pertama:</label>
+    <input type="number" id="bil1" placeholder="Masukkan bilangan 1" />
+
+    <label for="bil2">Input Angka Kedua:</label>
+    <input type="number" id="bil2" placeholder="Masukkan bilangan 2" />
+
+    <div class="operators">
+        <button onclick="setOperator('*')">×</button>
+        <button onclick="setOperator('+')">+</button>
+        <button onclick="setOperator('-')">−</button>
+        <button onclick="setOperator('/')">÷</button>
+    </div>
+
+    <button id="hitung" onclick="hitung()">Hitung</button>
+    <button id="reset" onclick="resetCalc()">Reset</button>
+
+    <p id="output"></p>
+
+    <script>
+        let operator = null;
+
+        function setOperator(op) {
+            const buttons = document.querySelectorAll(".operators button");
+
+            if (operator === op) {
+                operator = null;
+                buttons.forEach(btn => btn.style.background = "#1976d2");
+                return;
+            }
+
+            operator = op;
+            buttons.forEach(btn => btn.style.background = "#1976d2");
+            event.target.style.background = "green";
+        }
+
+        function hitung() {
+            const bil1 = parseFloat(document.getElementById("bil1").value);
+            const bil2 = parseFloat(document.getElementById("bil2").value);
+            const output = document.getElementById("output");
+
+            if (isNaN(bil1) || isNaN(bil2)) {
+                output.textContent = "Input harus berupa angka.";
+                output.style.color = "red";
+                return;
+            }
+            if (!operator) {
+                output.textContent = "Pilih operator terlebih dahulu.";
+                output.style.color = "red";
+                return;
+            }
+            if (operator === "/" && bil2 === 0) {
+                output.textContent = "Error: Tidak bisa membagi dengan nol.";
+                output.style.color = "red";
+                return;
+            }
+
+            let hasil;
+            switch (operator) {
+                case "+": hasil = bil1 + bil2; break;
+                case "-": hasil = bil1 - bil2; break;
+                case "*": hasil = bil1 * bil2; break;
+                case "/": hasil = bil1 / bil2; break;
+            }
+
+            output.textContent = `${bil1} ${operator} ${bil2} = ${hasil}`;
+            output.style.color = "black";
+        }
+
+        function resetCalc() {
+            document.getElementById("bil1").value = "";
+            document.getElementById("bil2").value = "";
+            document.getElementById("output").textContent = "";
+            operator = null;
+
+            const buttons = document.querySelectorAll(".operators button");
+            buttons.forEach(btn => btn.style.background = "#1976d2");
+
+            document.getElementById("bil1").focus();
+        }
+    </script>
+</body>
+
+</html>
