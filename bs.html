@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProWeb</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hello World!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Tombol Dark Mode -->
+                <button id="darkModeToggle" class="btn btn-outline-dark ms-3">🌙 Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col align-self-center">
+                <h1>Selamat Datang di ProWeb</h1>
+                <p>Ini adalah web tugas bootstrap saya</p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#daftarModal"
+                    data-bs-toggle="tooltip" title="Klik untuk mendaftar">
+                    Daftar
+                </a>
+            </div>
+            <div class="col d-none d-lg-block">
+                <img src="server.jpeg" width="100%" alt="path" />
+            </div>
+        </div>
+    </section>
+
+    <!--Modal-->
+    <div class="modal fade" id="daftarModal" tabindex="-1" aria-labelledby="daftarModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="daftarModalLabel">Form Pendaftaran</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card Section -->
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="https://akcdn.detik.net.id/community/media/visual/2024/04/26/ernando-ari-2_169.jpeg?w=700&q=90"
+                        class="card-img-top" alt="img1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sepakbola</h5>
+                        <p class="card-text">Emil Audero dan Maarten Paes dalam kondisi yang tidak fit. Ernando Ari
+                            potensi menjadi kiper pertama Timnas Indonesia dan Nadeo Argawinata bisa merapat. <br>
+                            Indonesia berada di Grup B pada fase Round 4 Piala Dunia 2026. Pasukan Patrick Kluivert laga
+                            pertama melawan Arab Saudi di King Abdullah Sports City Stadium, Jeddah, Kamis (9/10/2025)
+                            dini hari WIB.</p>
+                        <a href="https://sport.detik.com/sepakbola/liga-indonesia/d-8138195/kans-ernando-ari-jadi-kiper-pertama-indonesia-dan-gabungnya-nadeo"
+                            class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="https://akcdn.detik.net.id/visual/2024/05/29/ilustrasi-artificial-intelligence-ai-reutersdado-ruvicillustrationfile-photo_169.jpeg?w=900&q=80"
+                        class="card-img-top" alt="img2">
+                    <div class="card-body">
+                        <h5 class="card-title">IT</h5>
+                        <p class="card-text">Perusahaan semakin banyak yang mengeluarkan anggaran untuk penggunaan
+                            artificial intelligent (AI), bahkan dibanding untuk penggunaan teknologi informasi alias
+                            information technology (IT) sekalipun, berdasarkan studi IBM. Pengeluaran untuk AI
+                            diperkirakan melonjak 52% dengan brand ritel menerapkan inovasi AI di seluruh operasi
+                            perusahaan.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 custom-card">
+                    <img src="https://akcdn.detik.net.id/community/media/visual/2022/05/15/ilustrasi-bitcoin_169.jpeg?w=700&q=90"
+                        class="card-img-top" alt="img3">
+                    <div class="card-body">
+                        <h5 class="card-title">Finance</h5>
+                        <p class="card-text">Pasar aset kripto kembali berada di bawah tekanan pada Jumat (26/9/),
+                            dengan total likuidasi posisi perdagangan mencapai lebih dari US$ 1,13 miliar atau sekitar
+                            Rp 19 triliun dalam 24 jam terakhir. Mayoritas likuidasi berasal dari posisi long,
+                            menandakan investor optimistis harus menutup posisinya akibat penurunan harga. Aset kripto
+                            lain juga mengalami koreksi.</p>
+                        <a href="https://finance.detik.com/fintech/d-8135257/harga-bitcoin-cs-rontok-sejak-the-fed-pangkas-suku-bunga" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <script>
+        // Aktifkan tooltip Bootstrap
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+    <!-- Custom JS -->
+    <script>
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById("darkModeToggle");
+        const body = document.body;
+        const navbar = document.getElementById("navbar");
+
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+            navbar.classList.toggle("navbar-dark");
+            navbar.classList.toggle("bg-dark");
+
+            if (body.classList.contains("dark-mode")) {
+                toggleBtn.innerText = "☀️ Light Mode";
+                toggleBtn.classList.remove("btn-outline-dark");
+                toggleBtn.classList.add("btn-outline-light");
+            } else {
+                toggleBtn.innerText = "🌙 Dark Mode";
+                toggleBtn.classList.remove("btn-outline-light");
+                toggleBtn.classList.add("btn-outline-dark");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
